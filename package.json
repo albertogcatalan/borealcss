@@ -1,6 +1,6 @@
 {
   "name": "borealcss",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.scss",
   "scripts": {
     "build": "rimraf css && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
