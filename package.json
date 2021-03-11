@@ -1,0 +1,23 @@
+{
+  "name": "borealcss",
+  "version": "1.0.0",
+  "main": "index.scss",
+  "scripts": {
+    "build": "rimraf css && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-sass": "node-sass --output-style expanded src/index.scss ./css/index.css",
+    "build-autoprefix": "postcss --use autoprefixer --map --output ./css/index.css ./css/index.css",
+    "build-cleancss": "cleancss -o ./css/index.min.css ./css/index.css"
+  },
+  "files": [
+    "css"
+  ],
+  "author": "Alberto Gonzáles",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^7.1.1",
+    "rimraf": "^3.0.2"
+  }
+}
